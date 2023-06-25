@@ -20,8 +20,8 @@ void	init_info(t_info *info)
 	info->map_info.width = 0;
 	info->map_info.height = 0;
 	info->map_info.num_of_collectables = 0;
-	info->map_info.n_players = 0;
-	info->map_info.n_exit = 0;
+	info->map_info.num_of_players = 0;
+	info->map_info.num_of_exit = 0;
 	info->images.empty = NULL;
 	info->images.wall = NULL;
 	info->images.collectible = NULL;
@@ -84,9 +84,13 @@ int	main(int argc, char **argv)
 	check_map_validity(info.map_info.map, &info);
 	check_player_position(info.map_info.map, &info);
 	start_minilibx(&info);
-	mlx_hook(info.window, 2, 1L << 0, key_hook, &info);//関数化した方がいいかも。それと2・33・12は知らない人からしたらマジックナンバーだしわかりにくいから変更すべき。
+	mlx_hook(info.window, 2, 1L << 0, key_hook, &info);//関数化した方がいいかも。
 	mlx_hook(info.window, 33, 1L << 17, mlx_free, &info);//mlx_hookの第三引数もわかりにくいので変更すべき。
 	mlx_hook(info.window, 12, 1L << 15, expose, &info);
 	mlx_loop(info.mlx);
 	return (0);
 }
+
+//mlx_hook関数でx_event 2はキーボードが押された時のハンドラを設定
+//x_event 33はウィンドウをcloseした時に実行されるハンドラ
+//x_event 12はウィンドウが再描画される時のハンドラ

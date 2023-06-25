@@ -37,7 +37,7 @@ typedef struct s_player
 {
 	int		pos_y;
 	int		pos_x;
-	size_t	num_of_steps;
+	int		num_of_steps;
 	size_t	collectables;
 }	t_player;
 
@@ -47,8 +47,8 @@ typedef struct s_map
 	size_t	width;
 	size_t	height;
 	size_t	num_of_collectables;
-	size_t	n_players;
-	size_t	n_exit;
+	size_t	num_of_players;
+	size_t	num_of_exit;
 }	t_map;
 
 typedef struct s_images
