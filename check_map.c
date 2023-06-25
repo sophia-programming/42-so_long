@@ -59,7 +59,6 @@ void func(char c, t_info *info))
 	size_t	row;
 
 	col = 0;
-
 	while (map[col])
 	{
 		row = 0;
