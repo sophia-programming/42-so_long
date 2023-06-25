@@ -32,5 +32,5 @@ void	put_error_message(t_info *info, char *message)
 	ft_putendl_fd(message, 2);
 	if (info != NULL)
 		mlx_free(info);
-	exit(EXIT_FAILURE);
+	exit(1);
 }

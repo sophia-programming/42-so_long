@@ -27,6 +27,10 @@
 #  define BUFFER_SIZE 1024
 # endif
 
+# ifndef MAX_VERTICES
+#  define MAX_VERTICES 100
+# endif
+
 typedef enum e_type{
 	TYPE_READ_SUCCESS = 1,
 	TYPE_READ_EOF = 0,
@@ -70,6 +74,12 @@ typedef struct s_info
 	t_player	player;
 }	t_info;
 
+typedef struct s_Graph
+{
+	int edges[MAX_VERTICES][MAX_VERTICES];  // 隣接行列
+	int numVertices;  // 頂点数
+} t_Graph;
+
 # define IMG_EMPTY 			"images/white.xpm"
 # define IMG_WALL 			"images/wall.xpm"
 # define IMG_COLLECTIBLE	"images/item.xpm"
@@ -82,6 +92,7 @@ typedef struct s_info
 # define SCREEN_SIZE 20
 
 # define ESC 65307
+
 /*main.c*/
 void	init_info(t_info *info);
 char	**set_map(char *map_file, t_info *info);
@@ -126,6 +137,7 @@ void	check_invalid_char(char c, t_info *info);
 void	start_minilibx(t_info *info);
 void	set_chip(t_info *conf);
 void	array_to_screen(char **map, t_info *info);
+
 
 /*mlx_part2.c*/
 int		key_hook(int keycode, t_info *info);

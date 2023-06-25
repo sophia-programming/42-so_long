@@ -95,9 +95,11 @@ void	start_minilibx(t_info *info)
 	size_x = ((int)(info->map_info.width)) * PIXEL_BITS;
 	size_y = ((int)(info->map_info.height)) * PIXEL_BITS;
 	if (info->map_info.width > SCREEN_SIZE)
-		size_x = SCREEN_SIZE * (PIXEL_BITS + 1);
+//		size_x = SCREEN_SIZE * (PIXEL_BITS + 1);
+		size_x = SCREEN_SIZE * (PIXEL_BITS);
 	if (info->map_info.height > SCREEN_SIZE)
-		size_y = SCREEN_SIZE * (PIXEL_BITS + 1);
+	//	size_y = SCREEN_SIZE * (PIXEL_BITS + 1);
+		size_y = SCREEN_SIZE * (PIXEL_BITS);
 	info->window = mlx_new_window(info->mlx, size_x, size_y, "so_long");
 	if (info->mlx == NULL)
 		put_error_message(info, "window is not open.");
