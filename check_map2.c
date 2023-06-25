@@ -23,7 +23,7 @@ void	count_specific_char(char c, t_info *info)
 	if (info->map_info.num_of_collectables > INT_MAX || \
 	info->map_info.num_of_exit > INT_MAX || \
 	info->map_info.num_of_players > INT_MAX)
-		put_error_message(info, "Too many C or E.");
+		put_error_message(info, "Too many C or E or P.");
 }
 
 void	check_invalid_char(char c, t_info *info)

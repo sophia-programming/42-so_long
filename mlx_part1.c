@@ -53,7 +53,6 @@ void	*get_img(char point_of_map, t_info *info)
 		put_error_message(info, "image is not exist.");
 		return (NULL);
 	}
-	return (NULL);
 }
 
 void	array_to_screen(char **map, t_info *info)

@@ -17,7 +17,10 @@ int	key_hook(int keycode, t_info *info)
 	if (keycode == 'w' || keycode == 'a' || keycode == 's' || keycode == 'd')
 		player_move(keycode, info);
 	else if (keycode == ESC)
+	{
 		mlx_free(info);
+		exit(EXIT_SUCCESS);
+	}
 	check_player_position(info->map_info.map, info);
 	if ((info->player.pos_y % SCREEN_SIZE) == 0 || \
 	(info->player.pos_x % SCREEN_SIZE) == 0)
@@ -39,7 +42,7 @@ void	check_game_clear(char *a, char *b, t_info *info)
 		pedometer(info);
 		*b = *a;
 		*a = '0';
-		ft_putendl_fd("Game Clear!!", STDERR_FILENO);
+		ft_putendl_fd("Game Clear!!", 2);
 		mlx_free(info);
 	}
 }
