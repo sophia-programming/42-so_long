@@ -74,7 +74,7 @@ typedef struct s_info
 	t_player	player;
 }	t_info;
 
-# define IMG_EMPTY 			"images/white.xpm"
+# define IMG_EMPTY 			"images/brack.xpm"
 # define IMG_WALL 			"images/wall.xpm"
 # define IMG_COLLECTIBLE	"images/item.xpm"
 # define IMG_EXIT 			"images/goal.xpm"

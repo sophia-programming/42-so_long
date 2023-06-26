@@ -73,8 +73,8 @@ void func(char c, t_info *info))
 
 void	check_map_empty(t_info *info)
 {
-	if (info->map_info.num_of_exit != 1)
-		put_error_message(info, "the number of exit should be one.");
+	if (info->map_info.num_of_exit == 0)
+		put_error_message(info, "exit doesn't exist.");
 	if (info->map_info.num_of_players != 1)
 		put_error_message(info, "the number of player should be one");
 	if (info->map_info.num_of_collectables == 0)
