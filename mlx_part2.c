@@ -29,6 +29,12 @@ int	key_hook(int keycode, t_info *info)
 	return (0);
 }
 
+int	close_window_hook(t_info *info)
+{
+	mlx_free(info);
+	exit(EXIT_SUCCESS);
+}
+
 int	expose(t_info *conf)
 {
 	array_to_screen(conf->map_info.map, conf);

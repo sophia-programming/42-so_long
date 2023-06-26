@@ -90,6 +90,7 @@ typedef struct s_info
 /*main.c*/
 void	init_info(t_info *info);
 char	**set_map(char *map_file, t_info *info);
+void	setup_hooks(t_info *info);
 void	check_player_position(char **map, t_info *conf);
 
 /*error.c*/

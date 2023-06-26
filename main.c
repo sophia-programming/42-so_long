@@ -72,6 +72,13 @@ void	check_player_position(char **map, t_info *info)
 	}
 }
 
+void	setup_hooks(t_info *info)
+{
+	mlx_hook(info->window, 2, 1L << 0, key_hook, info);
+	mlx_hook(info->window, 33, 1L << 17, mlx_free, info);
+	mlx_hook(info->window, 12, 1L << 15, expose, info);
+}
+
 int	main(int argc, char **argv)
 {
 	t_info	info;
@@ -84,9 +91,7 @@ int	main(int argc, char **argv)
 	check_map_validity(info.map_info.map, &info);
 	check_player_position(info.map_info.map, &info);
 	start_minilibx(&info);
-	mlx_hook(info.window, 2, 1L << 0, key_hook, &info);
-	mlx_hook(info.window, 33, 1L << 17, mlx_free, &info);
-	mlx_hook(info.window, 12, 1L << 15, expose, &info);
+	setup_hooks(&info);
 	mlx_loop(info.mlx);
 	return (0);
 }
