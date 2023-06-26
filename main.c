@@ -74,9 +74,16 @@ void	check_player_position(char **map, t_info *info)
 
 void	setup_hooks(t_info *info)
 {
-	mlx_hook(info->window, 2, 1L << 0, key_hook, info);
-	mlx_hook(info->window, 33, 1L << 17, mlx_free, info);
-	mlx_hook(info->window, 12, 1L << 15, expose, info);
+	long	key_pushed_mask;
+	long	key_up_mask;
+	long	window_update_event;
+
+	key_pushed_mask = 1L << 0;
+	key_up_mask = 1L << 17;
+	window_update_event = 1L << 15;
+	mlx_hook(info->window, 2, key_pushed_mask, key_hook, info);
+	mlx_hook(info->window, 33, key_up_mask, mlx_free, info);
+	mlx_hook(info->window, 12, window_update_event, expose, info);
 }
 
 int	main(int argc, char **argv)
