@@ -27,10 +27,6 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-# ifndef MAX_VERTICES
-#  define MAX_VERTICES 100
-# endif
-
 typedef enum e_type{
 	TYPE_READ_SUCCESS = 1,
 	TYPE_READ_EOF = 0,
