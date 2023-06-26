@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-size_t	fd_to_lst(int fd, t_list **buf) //縦のサイズを知りたい
+size_t	fd_to_lst(int fd, t_list **buf)
 {
 	char	*line;
 	size_t	node_size;

@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-void	set_chip(t_info *info)
+void	set_images(t_info *info)
 {
 	info->images.empty = mlx_xpm_file_to_image(info->mlx, IMG_EMPTY, \
 		&(info->images.size), &(info->images.size));
@@ -90,7 +90,7 @@ void	start_minilibx(t_info *info)
 	info->mlx = mlx_init();
 	if (info->mlx == NULL)
 		put_error_message(info, "mlx is not initialize.");
-	set_chip(info);
+	set_images(info);
 	size_x = ((int)(info->map_info.width)) * PIXEL_BITS;
 	size_y = ((int)(info->map_info.height)) * PIXEL_BITS;
 	if (info->map_info.width > SCREEN_SIZE)
