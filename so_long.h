@@ -71,14 +71,14 @@ typedef struct s_info
 }	t_info;
 
 # define IMG_EMPTY 			"images/brack.xpm"
-# define IMG_WALL 			"images/wall.xpm"
-# define IMG_COLLECTIBLE	"images/item.xpm"
-# define IMG_EXIT 			"images/goal.xpm"
-# define IMG_PLAYER 		"images/cat.xpm"
+# define IMG_WALL 			"images/new_wall.xpm"
+# define IMG_COLLECTIBLE	"images/new_item.xpm"
+# define IMG_EXIT 			"images/new_goal.xpm"
+# define IMG_PLAYER 		"images/new_cat.xpm"
 
 # define OPEN_FAILURE -1
 
-# define PIXEL_BITS	50
+# define PIXEL_BITS	30
 # define SCREEN_SIZE 20
 
 # define ESC 65307
