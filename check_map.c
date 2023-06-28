@@ -20,7 +20,7 @@ void	check_map_rectangle(char **map, t_info *info)
 	while (map[col])
 	{
 		if (col == 0)
-			(*info).map_info.width = ft_strlen(map[col]);
+			info->map_info.width = ft_strlen(map[col]);
 		if (info->map_info.width != ft_strlen(map[col]))
 			put_error_message(info, "map is not rectangle.");
 		col += 1;
