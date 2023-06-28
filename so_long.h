@@ -70,7 +70,7 @@ typedef struct s_info
 	t_player	player;
 }	t_info;
 
-# define IMG_EMPTY 			"images/brack.xpm"
+# define IMG_EMPTY 			"images/new_brack.xpm"
 # define IMG_WALL 			"images/new_wall.xpm"
 # define IMG_COLLECTIBLE	"images/new_item.xpm"
 # define IMG_EXIT 			"images/new_goal.xpm"
