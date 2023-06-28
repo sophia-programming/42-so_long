@@ -52,8 +52,8 @@ char	**set_map(char *map_file, t_info *info)
 
 void	check_player_position(char **map, t_info *info)
 {
-	size_t		col;
-	size_t		row;
+	int		col;
+	int		row;
 
 	col = 0;
 	while (map[col])
@@ -66,9 +66,9 @@ void	check_player_position(char **map, t_info *info)
 				info->player.pos_y = col;
 				info->player.pos_x = row;
 			}
-			row += 1;
+			row++;
 		}
-		col += 1;
+		col++;
 	}
 }
 

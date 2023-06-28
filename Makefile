@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC				= 	gcc
-CFLAGS			= 	-Wall -Wextra -Werror
+CC				= 	cc
+CFLAGS			= 	-g3 -fsanitize=address -Wall -Wextra -Werror
 NAME			= 	so_long
 
 LIBFT_PATH		= 	./libft/

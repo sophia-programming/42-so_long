@@ -49,5 +49,5 @@ int	mlx_free(t_info *info)
 		mlx_loop_end(info->mlx);
 		free(info->mlx);
 	}
-	return (0);
+	exit(1);
 }
