@@ -74,9 +74,9 @@ void	check_player_position(char **map, t_info *info)
 
 void	setup_hooks(t_info *info)
 {
-	long	key_pushed_mask;
-	long	key_up_mask;
-	long	window_update_event;
+	int	key_pushed_mask;
+	int	key_up_mask;
+	int	window_update_event;
 
 	key_pushed_mask = 1L << 0;
 	key_up_mask = 1L << 17;
