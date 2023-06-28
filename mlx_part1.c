@@ -66,7 +66,7 @@ void	array_to_screen(char **map, t_info *info)
 	large_y = (info->player.pos_y / SCREEN_SIZE) * SCREEN_SIZE;
 	large_x = (info->player.pos_x / SCREEN_SIZE) * SCREEN_SIZE;
 	small_y = 0;
-	while (map[large_y + small_y] != NULL)
+	while (map[large_y + small_y])
 	{
 		small_x = 0;
 		while (map[large_y + small_y][large_x + small_x] != '\0')

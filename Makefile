@@ -13,7 +13,6 @@
 CC				= 	gcc
 CFLAGS			= 	-Wall -Wextra -Werror
 NAME			= 	so_long
-INCLUDES		= 	includes
 
 LIBFT_PATH		= 	./libft/
 FT_PRINTF_PATH	= 	./ft_printf/
@@ -55,7 +54,7 @@ mlx:
 				$(MLXMAKE)
 
 .c.o:
-				$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@
+				$(CC) $(CFLAGS) -I includes -c $< -o $@
 
 clean:
 				$(LIBFTMAKE) clean

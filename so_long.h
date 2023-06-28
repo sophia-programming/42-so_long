@@ -70,11 +70,11 @@ typedef struct s_info
 	t_player	player;
 }	t_info;
 
-# define IMG_EMPTY 			"images/new_brack.xpm"
-# define IMG_WALL 			"images/new_wall.xpm"
-# define IMG_COLLECTIBLE	"images/new_item.xpm"
-# define IMG_EXIT 			"images/new_goal.xpm"
-# define IMG_PLAYER 		"images/new_cat.xpm"
+# define IMG_EMPTY 			"textures/new_brack.xpm"
+# define IMG_WALL 			"textures/new_wall.xpm"
+# define IMG_COLLECTIBLE	"textures/new_item.xpm"
+# define IMG_EXIT 			"textures/new_goal.xpm"
+# define IMG_PLAYER 		"textures/new_cat.xpm"
 
 # define OPEN_FAILURE -1
 
