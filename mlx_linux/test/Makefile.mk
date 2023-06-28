@@ -28,7 +28,7 @@ endif
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -o $(NAME) $(OBJ) $(LFLAGS)
+	$(CC) -o $(NAME) $(OBJ) $(LFLAGS) 2>/dev/null
 
 show:
 	@printf "UNAME		: $(UNAME)\n"
