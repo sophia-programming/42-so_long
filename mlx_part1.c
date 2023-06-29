@@ -76,9 +76,9 @@ void	array_to_screen(char **map, t_info *info)
 				return ;
 			mlx_put_image_to_window(info->mlx, info->window, img, \
 				PIXEL_BITS * small_x, PIXEL_BITS * small_y);
-			small_x += 1;
+			small_x++;
 		}
-		small_y += 1;
+		small_y++;
 	}
 }
 
