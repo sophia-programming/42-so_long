@@ -23,7 +23,7 @@ void	check_map_rectangle(char **map, t_info *info)
 			info->map_info.width = ft_strlen(map[col]);
 		if (info->map_info.width != ft_strlen(map[col]))
 			put_error_message(info, "map is not rectangle.");
-		col += 1;
+		col++;
 	}
 }
 
@@ -42,13 +42,13 @@ void	check_map_wall(char **map, t_info *info)
 			{
 				if (map[col][row] != '1')
 					put_error_message(info, "map is not rectangle.");
-				row += 1;
+				row++;
 			}
 		}
 		else if (map[col][0] != '1' || \
 		map[col][info->map_info.width - 1] != '1')
 			put_error_message(info, "map is not rectangle");
-		col += 1;
+		col++;
 	}
 }
 
@@ -65,9 +65,9 @@ void func(char c, t_info *info))
 		while (map[col][row] != '\0')
 		{
 			func(map[col][row], info);
-			row += 1;
+			row++;
 		}
-		col += 1;
+		col++;
 	}
 }
 
