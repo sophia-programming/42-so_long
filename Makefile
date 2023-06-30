@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC				= 	cc
-CFLAGS			= 	-g3 -fsanitize=address -Wall -Wextra -Werror
+CFLAGS			= 	-Wall -Wextra -Werror
 NAME			= 	so_long
 
 LIBFT_PATH		= 	./libft/
@@ -25,11 +25,11 @@ SRCS_FILES    	= 	main.c convert.c error.c \
 
 SRCS_OBJS		= 	$(SRCS_FILES:.c=.o)
 
-LIBFTMAKE		= 	$(MAKE) -C $(LIBFT_PATH)
+LIBFTMAKE		= 	make -C $(LIBFT_PATH)
 LIBFTFLAG		= 	-L$(LIBFT_PATH) -lft
-FT_PRINTFMAKE	= 	$(MAKE) -C $(FT_PRINTF_PATH)
+FT_PRINTFMAKE	= 	make -C $(FT_PRINTF_PATH)
 FT_PRINTFFLAG	= 	-L./$(FT_PRINTF_PATH) -lftprintf
-MLXMAKE			= 	$(MAKE) -C $(MLX_PATH)
+MLXMAKE			= 	make -C $(MLX_PATH)
 MLXFLAG			= 	-L$(MLX_PATH) -lmlx -Imlx_linux -lXext -lX11 -lm -L/usr/X11R6/lib
 GITMLX			= 	git clone https://github.com/42Paris/minilibx-linux.git mlx_linux
 
