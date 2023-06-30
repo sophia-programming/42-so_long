@@ -52,8 +52,8 @@ void	check_map_wall(char **map, t_info *info)
 	}
 }
 
-void	check_map_loop(char **map, t_info *info, \
-void func(char c, t_info *info))
+void	check_map_loop(char **map, \
+t_info *info, void func(char c, t_info *info))
 {
 	size_t	col;
 	size_t	row;
