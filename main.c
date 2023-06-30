@@ -14,24 +14,8 @@
 
 void	init_info(t_info *info)
 {
-	info->mlx = NULL;
-	info->window = NULL;
-	info->map_info.map = NULL;
-	info->map_info.width = 0;
-	info->map_info.height = 0;
-	info->map_info.num_of_collectables = 0;
-	info->map_info.num_of_players = 0;
-	info->map_info.num_of_exit = 0;
-	info->images.empty = NULL;
-	info->images.wall = NULL;
-	info->images.collectible = NULL;
-	info->images.exit = NULL;
-	info->images.player = NULL;
+	*info = (t_info){0};
 	info->images.size = PIXEL_BITS;
-	info->player.pos_y = 0;
-	info->player.pos_x = 0;
-	info->player.num_of_steps = 0;
-	info->player.collectables = 0;
 }
 
 char	**set_map(char *map_file, t_info *info)
